@@ -1,82 +1,74 @@
+/* Importar una fuente de Google Fonts (ej. 'Poppins') */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 /* Estilos generales para la sección de adopción */
 .Opciones-adopcion {
   display: flex;
-  flex-wrap: wrap; /* Permite que las tarjetas pasen a la siguiente línea en pantallas pequeñas */
-  justify-content: center; /* Centra las tarjetas horizontalmente */
-  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Usa 'gap' para un espaciado más limpio entre las tarjetas */
+  padding: 40px 20px;
+  background-color: #f0f2f5;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Estilos para cada tarjeta de animal, usando un selector de atributo */
 div[class*="galeria-"] {
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin: 15px;
-  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 12px; /* Borde más redondeado */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  width: calc(33.33% - 20px);
+  box-sizing: border-box;
   text-align: center;
-  width: calc(33% - 30px); /* Aproximadamente 1/3 del ancho con márgenes */
-  box-sizing: border-box; /* Incluye el padding y el borde en el ancho */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones para el efecto hover */
-}
-
-/* Estilos para la imagen dentro de la tarjeta */
-div[class*="galeria-"] img {
-  width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
-  height: auto; /* Mantiene la proporción de la imagen */
-  border-radius: 6px;
-  margin-bottom: 10px;
-  display: block; /* Evita espacio extra debajo de la imagen */
-  object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse (puede recortar) */
-  aspect-ratio: 4 / 3; /* Opcional: establece una proporción para las imágenes */
-}
-
-/* Estilos para el texto dentro de la tarjeta */
-div[class*="galeria-"] h3 {
-  margin-top: 0;
-  margin-bottom: 5px;
-  color: #333;
-}
-
-div[class*="galeria-"] p {
-  color: #666;
-  font-size: 0.9em;
-  margin-bottom: 10px;
-}
-
-/* Estilos para el botón */
-div[class*="galeria-"] button {
-  background-color: #5cb85c;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1em;
-  border-radius: 5px;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-div[class*="galeria-"] button:hover {
-  background-color: #4cae4c;
+  overflow: hidden; /* Oculta cualquier desbordamiento de la imagen con el hover */
 }
 
 /* Efecto al pasar el cursor sobre la tarjeta */
 div[class*="galeria-"]:hover {
-  transform: translateY(-5px); /* Eleva ligeramente la tarjeta */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Media query para pantallas más pequeñas (ej. móviles) */
-@media (max-width: 768px) {
-  div[class*="galeria-"] {
-    width: calc(50% - 30px); /* Dos tarjetas por fila en pantallas medianas */
-  }
+/* Estilos para la imagen dentro de la tarjeta */
+div[class*="galeria-"] img {
+  width: 100%;
+  height: 200px; /* Altura fija para un diseño consistente */
+  border-radius: 10px;
+  margin-bottom: 15px;
+  display: block;
+  object-fit: contain; /* ¡Solución al corte de imágenes! Escala la imagen para que quepa completamente */
+  background-color: #f8f8f8; /* Un color de fondo para rellenar los espacios vacíos */
+  transition: transform 0.4s ease;
 }
 
-@media (max-width: 480px) {
-  div[class*="galeria-"] {
-    width: 100%; /* Una tarjeta por fila en pantallas pequeñas */
-  }
+/* Efecto de zoom en la imagen al pasar el cursor */
+div[class*="galeria-"]:hover img {
+  transform: scale(1.05); /* Zoom sutil en la imagen */
 }
+
+/* Estilos para el texto y el botón */
+div[class*="galeria-"] h3 {
+  color: #2c3e50;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.Opciones-adopcion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  background-color: #fcfaf6; /* ¡Cambiado a un fondo más cálido! */
+  font-family: 'Poppins', sans-serif;
+}
+   header {
+    background: #ff914d;
+    color: white;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+ }

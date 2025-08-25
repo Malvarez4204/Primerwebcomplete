@@ -129,3 +129,26 @@ footer {
     border-top: 1px solid #444;
     padding-top: 20px;
 }
+.botones button {
+  background: linear-gradient(45deg, #ff914d, #ff6f3c);
+  background-size: 200% 200%;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.botones button:hover {
+  background-position: right center;
+  transform: translateY(-3px);
+}
+header {
+    background: #ff914d;
+    color: white;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
